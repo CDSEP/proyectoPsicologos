@@ -15,9 +15,11 @@
                     {{-- <img class="w-full h-80 object-cover object-center" src="{{ Storage::url($post->image->url) }}"
                     alt=""> --}}
                     @if ($post->image)
-                    <img class="w-full h-72 object-cover object-center" src="{{ Storage::url($post->image->url) }}" alt="">
+                        <img class="w-full h-72 object-cover object-center" src="{{ Storage::url($post->image->url) }}"
+                            alt="">
                     @else
-                    <img class="w-full h-72 object-cover object-center" src="https://i.ibb.co/k0FN8f1/7.png" alt="">
+                        <img class="w-full h-72 object-cover object-center" src="https://i.ibb.co/k0FN8f1/7.png"
+                            alt="">
                     @endif
 
 
@@ -37,20 +39,20 @@
                 </h1>
                 <ul>
                     @foreach ($similares as $similar)
-                    <li class="mb-4">
-                        <a class="flex" href="{{ route('posts.show', $similar) }}">
-                            @if ($similar->image)
-                            <img class="w-36 h-20 object-cover object-center" src="{{ Storage::url($similar->image->url) }}" alt="">
-                            @else
-                            <img class="w-36 h-20 object-cover object-center" src=" https://i.ibb.co/16dqvL5/3.png " alt="">
-
-                            
-                            @endif
-                            <span class="ml-2 text-gray-600">
-                                {{ $similar->name }}
-                            </span>
-                        </a>
-                    </li>
+                        <li class="mb-4">
+                            <a class="flex" href="{{ route('posts.show', $similar) }}">
+                                @if ($similar->image)
+                                    <img class="w-36 h-20 object-cover object-center"
+                                        src="{{ Storage::url($similar->image->url) }}" alt="">
+                                @else
+                                    <img class="w-36 h-20 object-cover object-center"
+                                        src=" https://i.ibb.co/16dqvL5/3.png " alt="">
+                                @endif
+                                <span class="ml-2 text-gray-600">
+                                    {{ $similar->name }}
+                                </span>
+                            </a>
+                        </li>
                     @endforeach
                 </ul>
             </aside>
