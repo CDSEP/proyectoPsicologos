@@ -19,10 +19,14 @@ Route::get('download-pdf', [UserController::class, 'downloadPdf'])->name('downlo
 
 // Route::get('/users/export/', [UserController::class, 'exportAllUsers'])->name('users.exportpdf');
 
-//  Route::get('download-pdf', [UserControllerPdf::class, 'downloadPDF'])->name('users.download');
+// Route::get('download-pdf', [UserControllerPdf::class, 'downloadPDF'])->name('users.download');
 
-
-
+// Route::post('new-patient/', [Patient::class, 'addPatient'])->name('patient.new');
+// Route::post('delete-patient/{patient}', [Patient::class, 'deletePatient'])->name('patient.delete');
+// Route::post('update-patient/{patient}', [Patient::class, 'updatePatient'])->name('patient.update');
+// Route::get('historial/{patient}', [Patient::class, 'seeHistorial'])->name('patient.historial');
+// Route::get('patients/{user}', [Patient::class, 'getPatients'])->name('patients.list');
+// Route::get('patient/{patient}', [Patient::class, 'getPatient'])->name('patient.info');
 
 
 
